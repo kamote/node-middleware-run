@@ -22,6 +22,7 @@ module.exports = function(){
   return Promise.each(middlewareChain, function(middleware){
     return Promise.method(middleware)(req, res, next)
     .then(function(value){
+      if(value == undefined) throw new NextRoute()
       if(value == "route") throw new NextRoute() // exit the promise chain
       if(value == "next") return "next"
       throw value
