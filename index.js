@@ -2,7 +2,6 @@ var Promise = require("bluebird")
 var _ = require("underscore")
 
 module.exports = function(){
-
   var args = _.values(arguments)
   var req = args[0]
   var res = args[1]
@@ -36,8 +35,4 @@ module.exports = function(){
   .catch(NextRoute, function(e){
     return "route"
   })
-  .catch(function(e){
-    return e
-  })
-
 }

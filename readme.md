@@ -32,7 +32,7 @@ expressRouter.get("/hello", function(req, res, next){
   ]).then(function(val){
     if(val == "next") return next()
     return next(val)
-  })
+  }).catch(next)
 })
 ```
 
@@ -47,6 +47,6 @@ middlewareRun(req, res, [
   middlewareNextRoute,
   middlewareSetTest("bar")
 ]).then(function(value){
-  console.log(req.test) /foo
+  console.log(req.test) //foo
 })
 ```
