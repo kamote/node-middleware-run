@@ -10,7 +10,7 @@ npm i middleware-run --save
 
 ## [`express-promise-router`](https://github.com/alex-whitney/express-promise-router).
 
-```
+```javascript
 var promiseRouter = require("express-promise-router")()
 promiseRouter.get("/hello", function(req, res){
   return middlewareRun(req, res, [
@@ -22,7 +22,7 @@ promiseRouter.get("/hello", function(req, res){
 
 ## Express Router
 
-```
+```javascript
 var expressRouter = require("express").Router()
 expressRouter.get("/hello", function(req, res, next){
   return middlewareRun(req, res, [
@@ -38,7 +38,7 @@ expressRouter.get("/hello", function(req, res, next){
 
 ## Without Router
 
-```
+```javascript
 var httpMocks = require('node-mocks-http')
 var req  = httpMocks.createRequest({})
 var res = httpMocks.createResponse()
