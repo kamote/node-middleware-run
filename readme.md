@@ -8,7 +8,7 @@ npm i middleware-run --save
 
 # Usage
 
-## [`express-promise-router`](https://github.com/alex-whitney/express-promise-router).
+#### [`express-promise-router`](https://github.com/alex-whitney/express-promise-router)
 
 ```javascript
 var promiseRouter = require("express-promise-router")()
@@ -20,7 +20,7 @@ promiseRouter.get("/hello", function(req, res){
 })
 ```
 
-## Express Router
+#### Express Router
 
 ```javascript
 var expressRouter = require("express").Router()
@@ -36,7 +36,7 @@ expressRouter.get("/hello", function(req, res, next){
 })
 ```
 
-## Without Router
+#### Without Router
 
 ```javascript
 var httpMocks = require('node-mocks-http')
